@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Una funcion debe tener un nombre. Una funcion puede o no recibir parametros.
+        //Una funcion puede o no retornar valores.
+        //Tambien son obejetos.
+
+        function EsUnaFuncion()
+        {
+            console.log("Uno");
+            console.log("Dos");   
+            console.log("Tres");
+        }
+        
+        //invocacion de funcion
+        EsUnaFuncion();
+      
+
+        //Segundo Ejemplo: una funcion puede retornar valores
+        function OtraFuncion()
+        {
+            console.log("Hola");
+            console.log("Mundo");
+            
+            return "Esto es un texto en la funcion";
+        }
+
+        //Obtenemos el valor de la funcion, solo del return, no de los console.log internos. 
+        let ValorDeFuncion = OtraFuncion();
+        console.log(ValorDeFuncion);
+
+
+        //Ejemplo 3
+        //Todo lo que esta antes del return se ejecuta, y lo que esta despues se ignora.
+        function NuevaFuncion()
+        {
+            console.log("Hola");
+            return "Texto de Nueva funcion";//Hasta aqui llega la ejecucion del codigo dentro de la funcion
+
+            console.log("Mundo");//Esto se ignora
+        }
+        let valorDeNuevaF = NuevaFuncion();
+        console.log(valorDeNuevaF);//Imprimimos lo retornado de la funcion
+
+
+        //Ejemplo 4: Una Funcion puede recibir parametros, y puede retornar o no el resultado de estos.
+        function EnviaP(parametro1, parametro2)
+        {
+            let suma = parametro1 + parametro2;
+            //Imprimimos el valor por consola sin retornar el valor a la llamada
+            console.log("La suma es: ",suma);
+        }
+
+        let v1 = 50, v2 = 30;
+        //Se llama a la funcion y se envian parametros.
+        EnviaP(v1,v2);
+
+
+        //Ejemplo 5: Funcion que retorna valores
+        function DevuelveR(parametro1, parametro2)
+        {
+            let resultado = parametro1 * parametro2;
+            return resultado;
+            //retornamos el valor a la funcion 
+        }
+        let f = 10, t=5;
+        console.log("La multiplicacion es: ",  DevuelveR(f, t));
+        //si quitamos el return, la funcion devuelve undefined ya que no tiene un valor a mostrar.
+
+
+
+        //Funcion de expresion anonima
+        //El nombre de la funcion es el nombre de la variable que almacenara la funcion. nombreF
+        //las funciones anonimas siempre se declaran con const
+         const nombreF = function(a, b)
+         {
+            return a+b;
+         }
+         
+         let q=2, r = 6;
+         //Llamada de la funcion para su ejecucion
+         console.log("el retorno de la funcion es", nombreF(q,r));
+
+
+    </script>
+</body>
+</html>

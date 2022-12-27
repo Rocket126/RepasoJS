@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boleanos en javascript</title>
+</head>
+<body>
+        <script> 
+            let verdadero = true;
+            let falso = false;  
+            
+            console.log(verdadero, falso);
+            //Para ver el tipo de dato podemos usar typeof
+            console.log(typeof verdadero, typeof falso);
+            
+            //Aqui creamos nuestros constructores boleanos usando la palabra Boolean() despues del caracter igual 
+            let v = Boolean(true);
+            let f = Boolean(false);
+
+            console.log(Boolean(0));
+            console.log(Boolean(-7));
+            console.log(Boolean(""));
+            console.log(Boolean(" "));
+            console.log(Boolean(' '));
+            
+            //Al ser un constructor con la palabra new, el valor de x aunque se le indique
+            //que sera false, para if siempre sera true, por ende no se debe usar este
+            //constructora para estructuras condicionales como if.
+            var x = new Boolean(false);
+            if(x)
+            {
+                console.log("x toma el valor de \n", x);
+            }
+            else
+            {
+                console.log("x 2 toma el valor de ", x);
+            }
+
+            //otro ejemplo con el contructor new para boolean
+            var myFalse = new Boolean(false);
+            console.log("hola mundo, el valor de myfalse es ", myFalse);
+
+            //Para esta linea tampoco se deberia usar el contructor new para un booleano, donde
+            //si se le entrega éste valor a otro objeto boleano, éste segundo objeto automaticamente 
+            //al recibir el parametro, lo transforma a true, solo por el hecho de recibir un parametro
+            //independiente de su valor.
+            var b = Boolean(myFalse);
+            if(b)
+            {   //al saber que b es true por el objeto boolean(myfalse), if ejecuta la sentencia.
+                console.log("el valor de b es ", b);
+            }
+
+            //Lo mismo que lo anterior, al ser un constructor/objeto de tipo String, al pasarlo
+            //como valor a otro objeto boleano, este segundo objeto por el solo hecho de recibir un valor
+            //lo transforma a true.
+            var myString = new String("Hola");
+            
+            var s = Boolean(myString);
+            console.log("hola mundo, el valor de s es ", s);//el valor de s es true y no el string
+            //si se quiere obtener el valor myString solo se usa la misma variable myString.
+            //no hay metodo para obtener el valor del booleano
+
+            //otro ejemplo distinto
+            let n = 2;
+            let k = Boolean(n);
+            if(k)
+            {   //aqui se ejecuta el console solo por el hecho de que n es distinto de 0, vacio,null, undefine,
+                console.log("el valor boleano de k es: ",k);
+            }
+
+        </script>
+</body>
+</html>

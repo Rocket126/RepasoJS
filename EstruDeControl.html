@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //if else
+
+        let edad = 17;
+        if(edad > 17)
+        {
+            console.log("eres mayor de edad");
+        }
+        else
+        {
+            console.log("No eres mayor de edad");
+        }
+
+        if(edad >= 18)
+        {
+            console.log("eres mayor de edad");
+        }
+        else{
+            console.log("No eres mayor de edad");
+        }
+
+
+        /*0hrs a 5
+          Buenos dias 6hrs - 11hrs
+          Buenos dias 12hrs - 18hrs
+          Buenos dias 19hrs - 23hrs
+        */
+
+        let hora = 18;
+
+        if(hora >=0 && hora <= 5)
+        {
+            console.log("dejame dormir");
+        }
+        else if(hora >=6 && hora <= 11)
+        {
+            console.log("Buenos Dias");
+        }
+        else if(hora >=12 && hora <= 18)
+        {
+            console.log("Buenas tardes");
+        }
+        else 
+        {
+            console.log("Buenas noches");
+        }
+        
+
+        //OPERADOR TERNARIO QUE SIMPLIFICA EL IF
+        //(condicion a cumplir)? linea codigo a ejecutar si es verdadero: la linea que se 
+        //ejecutara si es falsa.
+        //(condicion) ? verdadero : falsa
+
+        edad2=1;
+        let mayorEdad = (edad2>=17) ? "Eres mayor de Edad1" : "Eres menor de edad";
+        console.log(mayorEdad);
+
+    </script>
+</body>
+</html>

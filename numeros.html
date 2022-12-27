@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 2;
+        let b = new Number(1);
+        let c = 7.19;
+        let d = "5.6";
+
+        //b es un valor primitivo aun siendo un objeto por un constructor
+        console.log(a,b);
+        //metodo toFixed() Devuelve una cadena que representa un número en notación de punto fijo. 
+        /*O redondea si se le indica la cantidad decimales, ejemplo: 1 decimal*/ 
+        console.log(c.toFixed(1));
+
+        console.log(c.toFixed(5));
+        //parseInt convierte un String a un entero eliminando los decimales
+        console.log(parseInt(d));
+
+        //parseFloat convierte un String a un numero de coma flotante
+        console.log(parseFloat(d));
+
+        //typeof devuelve el tipo de dato de un elemento/variable
+        //en este caso muestra en pantalla que c es de tipo numero. Si fuera un string, lo menciona.
+        console.log(typeof c, typeof d);
+
+        console.log(a+b);
+
+        //sumar un numero con un string no se puede, lo que hace javascript en este caso es conviertir a c en string y concatenar
+        //d a este numero. Muestra 7.195.6
+        console.log(c + d);
+
+        //En este caso al hacer el mismo ejemplo pero parseando/casting la variable d a float, 
+        //si se podra sumar de manera normal.
+        console.log(c + parseFloat(d)); 
+
+        console.log(c + Number.parseFloat(d)); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Parametro Rest
+
+        function k(a,b,...c)
+        {
+            let suma = a+b;
+            
+
+            c.forEach(function(n)//si c no tiene un valor, no entra al for.
+            {//forEach itera en la funcion la cual tiene el variable n que representa el valor de C
+                suma = suma+n;
+            }
+            );
+
+            return suma;
+        }
+
+        console.log(k(1,2));//imprime 3
+        console.log(k(1,2,3));//imprime 6 
+
+
+
+
+        //Operador Spread
+        //con este operador Spread podemos insertar valores dentro de arreglos u Objetos.
+        //en vez de usar push en vectores, usamos Spread
+
+        let Arreglo1 = [1,2,3,4,5], Arreglo2 = [6,7,8,9,10];
+        
+        //Al igual que el anterior uso con el operador Rest y sus 3 puntos, usamos eso aqui.
+        //creamos un nuevo vector
+        
+        let Arreglo3= [...Arreglo1, ...Arreglo2];
+
+        console.log(Arreglo3);
+
+
+        //manera antigua 
+
+        let v1=[9,8,7,6,5], v2=[4,3,2,1,0];
+
+        let v3 = [];
+        v3.push(v1);//inserta el vector 1 en v3.
+        v3.push(v2);
+
+        console.log(v3);//imprime un vector de 2 posiciones 0 y 1 que contienen array1 y array2
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Las prioridades de los signos para realizar calculos matetmaticos se mantienen en javascript
+        //Primero los parentecis, las divisiones, multiplicaciones, sumas y restas.
+        let a = 5+5 - 10*3;
+        console.log(a);
+
+        //operador modulo % para obtener el resto de la division
+        let resultado = 5%3;
+        console.log(resultado);
+
+        //operadorodes relacionales >, >=, <, <=
+        console.log(8>9);//true
+        console.log(9>8);//False
+
+        console.log(9>=8);//true
+        console.log(9<=8);//false
+
+        //operador ==, ===
+        //este igual == solo compara valores, y no tipos de datos.
+        console.log(9==8);//false 
+
+        console.log("8" == 8);//true. Aunque sea un string, pero es un mismo numero aunque sea string
+
+        //este === compara el tipo de dato y su valor.
+        console.log("8" === 8);
+        //A nivel de tipo de dato, el 8 es cadena, y el otro entero. Por ende false
+
+        let i=2;
+        console.log(i++);//muestra 2 y luego crece a 3 para pasar al siguiente console y crecer a 4 
+        console.log(++i);//crece a 4
+
+        //!----Not significa lo que es verdadero, lo vuelve a falso
+        //|| or Cuando tengo 2 o mas condiciones, cuando una se cumpla, el OR validara.
+        //&& and
+
+        console.log(!true);//devuelve false
+        console.log(!false);//devuelve true
+
+        //devuelve true, ya que uno de ellos si se cumple 9===9
+        //basta con que uno se cumpla
+        console.log((9 === 9) || ("9" === 9));
+
+        //And valida que TODAS deban cumplirse como verdadero (TRUE)
+        console.log(("9" === "9") && ("9" === "9"));//true
+
+        console.log(("9" === 9) && ("9" === 9));//false
+        console.log(("9" === "9") && ("9" === 9));//false
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

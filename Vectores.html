@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = []; //Vector vacio
+                                    //Sub arreglo
+        const b = [1, true, "Hola", ["A","B","C"]];
+
+        console.log("Arraglo a: ",a);//imprime vector vacio
+
+        console.log("Arraglo b: ", b);//imprime 1, true, hola, a, b, c
+        //imprime indicando que tiene tamaño 4 elementos ya que a,b,c es un sub arreglo de 3 elementos y solo lo toma con un indice
+        
+
+       //declaramos un arreglo con  un sub arreglo
+       const xx = ["Hola", 2 , "perro", ["taza", 7, 8]];
+       //Para acceder al sub arreglo y algun elemento indicamos la posicion del sub arreglo
+       //y la posicion del elemento (posicion es igual indice)
+
+       console.log("Arreglo xx:", xx[3][1]);//imprime el valor 7 en la posicion 1 del subarreglo
+
+       //*************************************************************************
+
+       //para insertar elementos dentro de un arreglo usamos el metodo push()
+       //que inserta siempre al final del arreglo
+
+       const fd = ["hola", 4, 7];
+       fd.push(10); 
+       console.log("Arraglo fd: ",fd); //imprime "hola",4,7,10
+
+
+       //Otra manera de delclarar un arreglo es usando el objeto Array(total elementos a crear) 
+       //y el metodo fill(indicarle el valor para cada elemento)
+       const hg = Array(100).fill("Hola");
+
+       console.log(hg);//Imprime 100 elementos con el valor de hola en string
+
+
+       //Eliminar elementos dentro de un vector con el metodo pop()
+       const L = [5, 7, 10];
+       L.pop();//Quitamos el ultimo elemento
+
+       console.log(L);// 5,7
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

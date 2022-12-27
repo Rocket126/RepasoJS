@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Objetos. Un objeto se declara con let o const. 
+        //Mayormente con const para que el objeto no pierda su referencia en memoria.
+        //los objetos tienen atributos y valores
+        const a = {nombre:"Juanito", apellido:"mbappe", edad: 30};
+
+        console.log(a);//imprime nombre:"carlos", apellido:"b" , edad: 30
+        //con un largo de 3 elementos
+
+
+        //Otro ejemplo. Un objeto puede contener internamente otro objeto, arreglos, y funciones.
+
+        const b = {nombre:"Ismael", edad: 33, 
+        rrss:{twitter:"twitter",facebook:"facebook", insta:"insta"}
+        ,pasatiempos:["correr", "bicicleta", "tenis"]};
+
+        console.log(b);
+
+        //para acceder a un valor del objeto se usan los nombres de atributos.
+        console.log(b.nombre);
+        console.log(b.rrss.facebook);
+        console.log(b.pasatiempos[1]);//bicicleta
+
+        //los objetos pueden tener tambien funciones
+
+        const jk = {Nombre: "ignacio", edad: 33, saludar: function(){console.log("hola mundo")} };
+        jk.saludar();     
+        
+        
+        //usar template string en la funcion y la palabra this que sirve para referirse a una cosa.
+        //la palabra this hace referencia al mismo objeto, en este caso el objeto gk
+        //this significa éste, de éste objeto accede al atributo nombre
+        //de ti mismo imprime la edad
+        const gk = {Nombre: "Pedro", edad: 31, saludar:function(){console.log(`hola mi nombre es ${this.Nombre} 
+        y mi edad es: ${this.edad}`)} };
+        gk.saludar();
+
+
+        //obteniendo solo los atributos con la propiedad object.keys(nombre de objeto)
+        console.log(Object.keys(gk));
+
+        //Obteniendo solo los valores del objeto con la propiedad Object.values();
+        console.log(Object.values(gk));
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

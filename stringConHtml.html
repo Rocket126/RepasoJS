@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Cadenas de Texto Strings 
+        // Propiedades en javascript: son caracteristicas o atributos de un tipo de texto
+        //ejemplo propiedad length, con esta obtenemos el largo o tamaño de un texto.
+        let nombre= "carlos";
+        console.log(nombre);
+        console.log(nombre.length);
+
+        let apellido = "Guzman";
+        console.log(apellido);
+        console.log(apellido.length);
+
+        //creamos un nuevo objeto para un tipo de dato(String) con la palabra reservada new 
+        let palabra = new String("Hola Mundo");
+        console.log(palabra);
+        console.log(palabra.length);
+
+        //**probando metodos en javascript (los metodos son acciones que hacen para un tipo de dato)
+        let texto = "     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.    ";
+        console.log(texto);
+        //el metodo trim quita los espacios al comienzo y al final de un texto
+        console.log(texto.trim());
+
+        //retorna true o false si encuentra el texto con el metodo includes("")
+        console.log("¿la palabra industry se encuentra en el texto?", texto.includes("industry"));
+
+
+        //Metodo split: con  este metodo podemos indicarle que al texto que se separe en torno a trozos, indicandole 
+        //con espacios, comas, o cualquier otro.
+        console.log(texto.split(" "));
+        //se le indica que separe el texto en base a comas
+        console.log(texto.split(","));
+
+        //Metodos para poner en mayusculas o minusculas un texto
+        console.log(nombre.toUpperCase());
+        //Minusculas
+        console.log(apellido.toLowerCase());
+
+        //Metodo para acceder a un caracter individual de una cadena. 
+        //Para el nombre "carlos" indicamos el indice 5 para acceder al caracter "s"
+        console.log(nombre.charAt(5));
+
+        console.log("***************");
+
+        for(let i=0; i<nombre.length; i++)
+        {
+            console.log(nombre.charAt(i)); 
+        }
+
+        //vector de string 
+        let otroTexto = ["hola","mundo","tierra"];
+
+        console.log("Largo del vector String otroTexto", otroTexto.length);
+        console.log("lo que esta en el indice 2 es "+ otroTexto[2]);
+
+        //Primero accedemos a la posicion 0 del vector "otroTexto" para luego seguir incrementando
+        for (let index = 0; index < otroTexto.length; index++) 
+        {
+        //Le indicamos a for su tamaño maximo obteniendo del vector la palabra con "index" y el largo de esta con "length"
+            for(let i=0; i<otroTexto[index].length; i++)
+            {   
+                //luego seleccionamos la palabra a recorrer con la variable "index" para el vector "otroTexto"
+                //seguido de esto, le indicamos con charAt que acceda e imprima cada caracter del texto que se encuentra 
+                //en el indice [index] de la variable otroTexto. index es igual a 0-1-2 por el tamaño del vector
+                console.log(otroTexto[index].charAt(i));
+            }
+            
+        }
+
+        //******************************************************************************************
+
+        //otro ejemplo para obtener los valores de manera individual y en mayusculas con el metodo
+        //toUpperCase
+
+        for(let i=0;i<otroTexto.length;i++)
+        {
+            console.log("lo que hay en el indice "+ i +" es: "+ otroTexto[i]);
+        }
+
+        //******************************************************************************************
+
+        //template String se usa para insertar texto dentro de un texto usando el signo dolar y llaves 
+        let nombre2 ="carlos", apellido2 ="Guzman";
+
+        let texto2 =` hola, mi nombre es ${nombre} ${apellido}`;
+
+        console.log(texto2);
+
+
+        //******************************************************************************************
+        String.raw `Hi ${4+5}`;
+
+
+
+
+
+
+    </script>
+</body>
+</html>

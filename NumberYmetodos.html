@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 1, b = 3;
+               
+        //retorna true si el resultado es infinito, de lo contrario, false.
+        console.log("la division de 1/3 ¿es infinita?", Number.isFinite(a/b));
+
+        console.log("¿el valor de a = 1 es de tipo entero?", Number.isInteger(a));
+
+        //chequea que los valores de variables sean enteros de verdad.
+        console.log("¿2 y -55 son enteros seguros?",Number.isSafeInteger(2), Number.isSafeInteger(-55));
+
+        let s = "32";
+        console.log("Convertir el valor de la variable s a entero, y es: ", parseInt(s));
+
+        miNumero = new Number(65);
+        Number.prototype.descripcion = null;
+        miNumero.descripcion = "velocidad del viento";
+        console.log(miNumero);
+
+        var d = new Date('December 17, 1995 03:24:00');
+        console.log(Number(d));
+
+        //let n = 0.1, g= 0.2;
+
+        console.log("Valor absoluto es: ",0.1 + 0.2);
+        console.log("Valor absoluto es: ",Math.abs(0.1 + 0.2 - 0.3));
+        console.log("Valor absoluto es: ",Math.abs(0.1 + 0.2 - 0.3 ) < Number.EPSILON);
+
+        //--------------------------------------------------------------------------
+
+        //Funcion Number() esta funcion se utiliza para convertir variables o valores a numero
+        //Tambien suele usarse como constructor, y este tiene metedos y constantes para trabajar 
+        //numeros.
+
+        console.log("convirtiendo el string 2345 a numero", Number("2345"));
+
+        let MiString = "5678";
+        //convertirlo a numero
+        console.log(Number("5678"));
+
+        //objeto undefined
+        //se utiliza para identificar si la variable a sido creada e inicializada.
+        //cuando una funcion no devuelve un valor, devuelve undefined.
+        //lo mismo con los metodos. Si un metodo no es capaz de hacer su accion con una variable, 
+        //esta devuelve undefined
+        
+        let suma;//no tiene valor
+        console.log("La suma es ",suma);
+
+        //Null se utiliza para cuando una variable no se le dara un valor de un comienzo.
+        //Null significa: vacio 
+        let y = null;
+        console.log("El valor de y es: ", y );
+
+        //Para verificar si una variable no tiene valor se puede usar el operador typeof 
+        //seguido de la variable mas el string 'undefined' ya que cuando una variable no tiene valor, 
+        //ésta devuelve undefined como string
+        let p;
+        if (typeof p === 'undefined')//si son iguales se ejecuta lo de adentro del if.
+        {
+            console.log("p: No posee un valor");
+        }
+
+        let algo = "a154";
+        console.log(`¿Es un String ${algo}? `, Number.isNaN(algo));
+        console.log(`¿Es un String ${algo}? `, isNaN(algo));
+        console.log(Number(algo));
+
+
+
+    </script>
+</body>
+</html>

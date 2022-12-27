@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const objeto1 = {nombre:"Pedro", 
+        apellido:"Ormazabal",
+        edad:30,
+        correo:"algo@gmail.com",
+        rrss:{tw:"twitter", FB:"Facebook",IG:"Instagram"},
+        telefono:4561233};
+
+
+        //Arreglos para recorrer objetos, uno de ellos es el for in
+        //La Key es la propiedad/atributo que recorrera el objeto.
+        //object es el objeto el cual recorreremos.
+        for (const atributo in objeto1) 
+        {
+            console.log(`${atributo} y su valor: ${objeto1[atributo]}`);
+        }
+
+
+        //For of. El ciclo for of sirve para recorrer arreglos en javascript
+        //Arreglos Primitivos como un vector de enteros o uno de String.
+        //o cualquiera que pueda partir para recorrer
+
+        let MiVector = [10, 20, 30, 40, 50, 60];
+
+        for(const i of MiVector)
+        {
+            console.log("Valor", i);
+        }
+
+        //Recorrer un vector de string
+        let MiString = "Hola mundo";
+
+        for(const i of MiString)
+        {
+            console.log("Caracter:",i);
+        }
+
+        
+      
+    </script>
+</body>
+</html>

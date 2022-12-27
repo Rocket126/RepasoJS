@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try
+        {
+            let h = "y";
+            
+            if(isNaN(h))//si h no es un numero, se ejecuta el throw, de lo contrario sigue
+            {//el throw error lo captura el catch y se detiene la ejecucion de la multiplicacion
+                throw new Error("la variable no es un numero");
+            }
+            
+            console.log(h*h);//se multiplica si es un numero.
+
+        }
+        catch(error)
+        {   //se ejecuta el mensaje almacenado en el error si se cumple el if
+            console.log(`el error es: ${error}`);
+        }
+        
+    </script>
+</body>
+</html>
