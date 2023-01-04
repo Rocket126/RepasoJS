@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //las arrow function son una nueva forma de definir las variables anonimas
+        //Las arrow function, su peculiaridad es que no es necesario que lleve la palabra function, sino solo sus 
+        //parentesis () seguido de una flecha => y sus llaves {}.
+
+        const miNuevaFuncion = () =>
+        { 
+            console.log("hola mundo, esto es una funcion flecha");
+        }
+
+        miNuevaFuncion();//llamando a la funcion.
+        //las arrow function llevan de manera implicita el return
+        //las arrow function si solo tiene una linea de codigo, no es necesario que lleve llaves {}.
+        
+        const funcionSuma = (a,b) => a+b;//return implicito(no es necesario ponerlo)
+
+        console.log(funcionSuma(5, 8));//llamada
+
+
+        //si la funcion tiene mas de 2 lineas de codigo, si debe llevar {}
+        const funcionConMasLineas = () =>
+        {
+            console.log("Esta funcion lleva 3 console log");
+            console.log("Esta funcion lleva 3 console log");
+            console.log("Esta funcion lleva 3 console log");
+        }
+
+        funcionConMasLineas();
+
+        //funcion con metodo forEach()
+
+        let numeros = [1,2,3,4,5];
+
+        numeros.forEach(function(el,index) {
+            console.log(`el Elemento ${el} esta en la posicion ${index}`)
+        });
+
+
+      /*  let palabra;//la variable palabra al no asignarle un valor, no tiene tipo, por tanto es undefined
+        if(typeof palabra === "undefined")
+        {
+            console.log("la variable no tiene valor");
+        }
+        else
+        {
+            console.log("la variable si tiene valor:",palabra);
+        }
+        */
+
+
+        function miString(palabra)
+        {
+            if(typeof palabra === 'undefined' )//si la variable no tiene un valor 
+            {
+                console.log("el valor de la variable palabra es:" ,palabra);
+                return "la variable no 1 tiene un valor asignado";
+            }
+            else if(palabra.valueOf() === "")//le pasa una cadena vacia ""
+            {
+                return "la variable no tiene 2 un texto";
+            }
+            else 
+            {
+                let palabra2 = palabra.split(" ");
+                return palabra2;
+            }
+        }
+        console.log(miString("Hola soy un texto"));
+
+
+        /***************************************************/
+         
+        let otraFuncion = (a,b,c) => a+b*c; 
+
+        console.log("la operacion es: ", otraFuncion(10,5,9));
+
+        
+        
+        // vector con arrow function
+
+        const vector = [1,2,3,4,5,6];
+
+        vector.forEach(function(elemento, index)
+        {
+            console.log(`El elemento ${elemento} esta en la posicion ${index}`);
+        });
+
+        console.log("******************************************************");
+
+        //Con arrow function seria asi
+
+        vector.forEach((elemento, index) =>
+        {
+            console.log(`${elemento} esta en la posicion ${index}`);
+        });
+
+
+
+        //una de las caracteristicas de las arrow function es que capturan el objeto this del
+        //contexto en el que se encuntren
+
+        function Funcion1()
+        {
+            console.log(this);
+        }
+
+        Funcion1();//en este caso captura el objeto window 
+        //ya que la funcion existe dentro del contexto del navegador. 
+
+
+        //un objeto
+        const miObjeto = {nombre:"pedro", 
+        apellido:"juan", 
+        miFuncionArrow: () => {console.log(this)} 
+        };
+
+        miObjeto.miFuncionArrow();
+
+        //un objeto 2
+        const miObjeto2 = {nombre:"cristian", 
+        apellido:"Gonzales", 
+        miFuncionArrow: function() 
+        {
+            console.log(this.nombre, "Ladra")
+        } 
+        };
+
+        miObjeto2.miFuncionArrow();
+ 
+
+
+
+
+
+    </script>
+</body>
+</html>
