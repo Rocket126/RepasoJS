@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //creamos un objeto comun y corriente
+
+        const Persona1 = {nombre:"Ivan",
+                        Apellido:"campos",
+                        miMetodo:function(){console.log("soy una persona");},
+                        mimetodo2:function(){console.log(`me llamo ${this.Apellido}`);}
+        };
+
+        Persona1.mimetodo2();//llamamos al metodo
+
+
+        //Creamos una funcion declarada simple donde el contexto a capturar de this el contexto externo(window)
+        function miFuncion()
+        {
+            console.log(this);
+        }
+        miFuncion();
+
+
+        //creamos una funcion constructora donde el contexto de this sera esta misma funcion
+        function Persona2(nombre, apellido)
+        {   
+            //atributos del objeto
+            this.nombre = nombre;
+            this.apellido = apellido;
+            
+          
+            this.sonar = function()
+            {
+                console.log("hola soy una persona2");
+            };
+        }
+
+        //creamos la instancia para el constructor 
+        const miPersona = new Persona2("Pedro","velasquez");
+
+        miPersona;//mi persona no es una funcion, es un constructor/objeto
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

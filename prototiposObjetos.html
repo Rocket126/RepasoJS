@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        /*
+        const animal = {
+            nombre:"snoopy",
+            sonar() {console.log("Hago sonidos porque estoy vivo");}
+        };
+
+
+        const animal2 = {
+            nombre:"Lola bunny",
+            sonar() {console.log("Hago sonidos porque estoy vivo");}
+        };
+
+        console.log(animal);
+        console.log(animal2);
+        */
+        
+
+        //Funcion construtora donde asignamos los metodos 
+        //al prototipo, no a la funcion como tal
+        function Animal(nombre, genero)
+        {
+            this.nombre = nombre;
+            this.genero = genero;
+
+            
+        }
+  
+        //asignamos esta funcion afuera del prototipo en caso de que 
+        //tengamos mas usuarios o clases que repitan o no metodos, a modo buena practica y 
+        //evitar el duplicado de los metodo s 
+        Animal.prototype.sonar = function (){console.log("Hago sonidos porque estoy vivo");};
+
+
+        //creamos una nueva variable que almacenara nuestro nuevo objeto de tipo funcion
+        //son dos instancias de mi prototipo animal
+        const miVariable = new Animal("Snoopy", "Macho");
+        const miVariable2 = new Animal("Lola", "Hembra");
+
+        console.log(miVariable);
+        console.log(miVariable2);
+
+
+
+
+
+    </script>
+ </body>
+ </html>
