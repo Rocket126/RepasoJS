@@ -43,12 +43,35 @@
 
         //creamos la instancia para el constructor 
         const miPersona = new Persona2("Pedro","velasquez");
+        //aqui creamos el objeto de tipo persona del constructor. 
+        //instanciamos esto y lo almacenamos en la variable mi persona
 
-        miPersona;//mi persona no es una funcion, es un constructor/objeto
+        miPersona;//mi persona no es una funcion, ahora es un objeto
 
 
 
+        //para los objetos a crear y tener un mejor rendimiento en performance en JS
+        //en las funciones constructoras solo debe ir los atributos.y los metodos deben ir fuera de este
+        function Persona3(nombre, apellido)
+        {   
+            //atributos del objeto
+            this.nombre = nombre;
+            this.apellido = apellido;
+            
+        }
 
+        //Metodo afuera del Constructor, pero dentro del objeto de este.
+        Persona3.prototype.sonar3 = function()
+            {
+                console.log("hola soy una persona3");
+            };
+
+        const miPersona3 = new Persona3("Cristian","Basualto");
+        //creamos el objeto de tipo "persona3" que se almacenara en el avariable miPersona
+
+
+        //para acceder a los atributos del objeto usamos la variable miPersona
+        miPersona3.sonar3();
 
 
 

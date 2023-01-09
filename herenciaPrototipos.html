@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //para la herencia creamos un constructor u objeto padre como primer paso
+
+        function Animal(nombre, genero)
+        {
+            this.nombre = nombre;
+            this.genero = genero;
+        }  
+
+        //Ahora asignamos los metodos al prototype del constructor
+        Animal.prototype.saluda = function ()
+        {
+            console.log("Hola soy un animal");
+        }
+
+        Animal.prototype.ladra = function()
+        {
+            console.log("guauu guauu!");
+        }
+
+        //creamos la instancia de tipo Animal para el constructor
+        //y le pasamos las variables.
+        const Goofy = new Animal("Goofy","Macho");
+        
+        //imprimimos los valores del constructor
+        console.log(Goofy);
+        Goofy.saluda();
+
+        console.log("***************************************************************");
+
+
+         //para la herencia y como bien dice, vamos a heredar los atributos del objeto padre animal
+         //y sus metodos  
+         //en javascript la herencia se da de manera prototipica
+         //funcion constructora perro
+         
+         
+        function perro (nombre, genero, tamanio)
+        {
+            this.super = Animal;
+            this.super(nombre,genero);
+            this.tamanio = tamanio;
+        }
+
+        //creamos constructor del objeto hijo
+        //perro hereda todo lo de Animal
+     perro.prototype = new Animal();
+
+     perro.prototype.constructor = perro;
+     //perro al ser una clase que hereda todo lo de animal, puede utilizar los metodos de animal
+     //tambien podemos sobreescribir los metodos del prototipo padre.
+
+     perro.prototype.saluda = function(){console.log("soy un perro y te saludo")};
+
+    
+     const miPerroMacho = new perro("max","macho", "mediano");
+     const miPerroHembra = new perro("kira", "Hembra","pequeña");
+
+     //imprimimos nuestras instancias
+     console.log(miPerroMacho);
+     console.log(miPerroHembra)
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
