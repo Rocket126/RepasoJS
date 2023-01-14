@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //para ecmascript en el año 2015 se actualiza lo que es prototipado  de objetos
+        //usando clases y herencia como si fuera otro leguaje tipo java, c,c#
+        //JS tras banbalinas sigue interpretando estas clases como prototipos.Porque js es lenguaje orientado a prototipos
+
+        class Animal
+        {
+            constructor(nombre, genero)//es un metodo especial que se ejecuta en el momento de crear objetos de este tipo
+            {//aqui recibe los parametros, en los parentesis
+                this.nombre = nombre;
+                this.genero = genero;
+            };
+
+            
+            //los metodos en las clases se escriben directamente sin la palabra this y function. 
+            //se hace como en los objetos literal. Nota: estos metodos si pueden recibir parametros
+            sonar()
+            {
+                console.log("Hago sonidos porque soy una persona");
+            };
+
+            saludar()
+            {
+                console.log(`Hola me llamo ${this.nombre}`);
+            };
+        };
+
+
+        class perro extends Animal
+        {
+            constructor(nombrE,sexo,tamanio)
+            {
+                super(nombrE,sexo);
+                this.tamanio = tamanio;
+            }
+
+            Presentandose(){console.log("Hola soy un perro del contructor de hijo");}
+            
+        } 
+
+        const Perro1 = new Animal("Mimi","Hembra");
+        const Perro2 = new perro("cristian", "macho","grande");
+
+        console.log(Perro1);
+        console.log(Perro2);
+
+        console.log(Perro1.nombre);
+
+        Perro2.saludar();
+        Perro2.Presentandose();
+       
+
+    </script>
+</body>
+</html>
