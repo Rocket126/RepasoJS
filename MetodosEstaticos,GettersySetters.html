@@ -7,6 +7,56 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+
+         //los metodos y atributos en JS son publicos, no existen privados en JS. 
+        class Animal 
+        {
+            constructor(nombre,raza)
+            {
+                this.nombre = nombre;
+                this.raza = raza;
+                this.edad=null;
+            }
+
+            //creamos los metodos get y set para una variable de la clase
+            //get solo obtiene y devuelve el valor de la variable que le indicamos
+
+            get getEdad()
+            {
+                return this.edad;
+            }
+
+
+            set setEdad(edad)//metodo establecedor 
+            {
+                return this.edad = edad;
+            }
+
+            static ladrar()//con static podemos hacer uso del metodo ladrar usando solo el nombre de la clase para invocarle.
+            {
+                console.log("Hola soy un animal");
+            }
+        }
+
+        const Perro = new Animal("goofy","labrador");
+        console.log(Perro);
+
+       
+
+        //los metodos se puede acceder a ellos desde cualquier lado indicando al metodo que es estatico (static)
+        //para acceder a estos metodos, no es necesario instanciar el objeto. 
+        Animal.ladrar();
+
+
+        console.log(Perro.getEdad);// Get edad obtiene el valor de edad, y este va a ser null, 
+        //ya que anteriormente inicializamos edad con valor null.
+      
+        //ahora al atributo edad le establecemos un valor con el metodo setEdad usando parametros.
+        Perro.setEdad = 6;
+
+        console.log(Perro.getEdad);//mostramos el nuevo valor de la propiedad edad
+
+    </script>
 </body>
 </html>
