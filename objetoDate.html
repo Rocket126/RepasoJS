@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Date());//objeto date
+
+        let fecha = new Date();
+        console.log(fecha);
+
+        console.log(fecha.getDate());//retorna el dia del mes como numero y no como string 
+
+        console.log(fecha.getDay());//devuelve el dia de la semana D,L,M,MI,J,V pero como numero 
+        //donde Domingo es 0 y Lunes es 1, y asi sucesivamente.
+        
+        switch (fecha.getDay()) 
+        {
+            case 0:
+                console.log("es el dia domingo");
+            break;
+
+            case 1:
+                console.log("es el dia Lunes: 1");
+            break;
+
+            case 2:
+                console.log("es el dia Martes");
+            break;
+        }
+
+
+
+        console.log(fecha.getMonth());//obtiene el mes actual dentro del año, pero como numero
+        //enero seria 0, febrero 1 y asi.
+
+        console.log(fecha.getFullYear())//devuelve el año en el que estamos, como un numero
+
+        console.log(fecha.getHours())//retorna solo las horas. las horas van 0 a 23 horas
+
+        console.log(fecha.getMinutes());//retorna solo los minutos
+
+        console.log(fecha.getTime());//retorna el timetamps 
+
+        console.log(fecha.getUTCHours());
+
+        console.log(fecha.toLocaleTimeString());//devuelve solo la hora como string
+
+        console.log(fecha.toLocaleDateString());//retorna solo la fecha como string
+
+        console.log(fecha.toDateString());//devuelve la fecha como lunes enero 17 2023
+
+
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

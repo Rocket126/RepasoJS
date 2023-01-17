@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(console);
+
+        console.time("cuanto tarda");//con el metodo time podemos saber cuanto tarda en ejecutarse
+        // el codigo mas abajo. Debe llevar un metodo time arriba, y uno abajo.
+        const vector = Array(1000);
+        for(let i=0; i<vector.length;i++)
+        {
+            vector[i] = i;
+        }
+
+        console.timeEnd("cuanto tarda");
+
+
+        let mivariable = (isNaN("hola"))? "sí, no es numero" : "lo es"; //Operador ternario
+        console.log(mivariable);
+
+        console.log(Number.isSafeInteger(-2));// retorna true ya que es un entero
+
+        console.warn("esto es un aviso");
+
+        console.error("esto es un error");
+
+        console.info("esto es un mensaje informativo");
+
+        let nombre = "jon", edad = 33 ;
+        console.log(`mi nombre es ${nombre} y mi edad ${edad}`);
+
+        console.clear();//limpia la consola del navegador
+
+        console.log(window);//objeto window en consola, veremos sus propiedades y metodos.
+
+        console.log(document);//es la representacion del documento/archivo html atravez de JS
+
+        //metodo dir() nos sirve para ver las propiedades y carateristicas de algun elemento del archivo html
+        //para destripar o analizar mas detalladamente las propiedades de algun elemento como si fuera un objeto
+        console.dir(document);
+        
+        console.clear();
+
+        //crear grupo en consola. se inserta una pestaña en las lineas siguientes como acordeon
+        console.group("los cursos de alguien");
+        console.log("curso de Javascript");
+        console.log("curso de Nodejs");
+        console.groupEnd();
+
+        console.table(Object.entries(console));//representa en una tabla todas las propiedades del objeto console
+
+        //console.count();//count contabiliza las veces que se ejecuta el codigo hecho, por ejemplo un for
+
+        for(let i=0; i<=10;i++)
+        {
+            console.log("valor:",i);
+            console.count("codigo for");
+        }
+
+
+        let miVector = [1,2,3,4,5,6,7,8,9];
+
+        miVector.forEach(function(elem,indice) 
+        {
+             console.log(`posicion: ${indice} ----- valor: ${elem} `)
+        });
+
+       for(const i of miVector)
+       {
+        console.log(i);
+       }
+
+       
+        
+        
+
+        </script>
+</body>
+</html>
