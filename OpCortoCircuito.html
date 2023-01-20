@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*operador corto circuito OR y AND
+        Cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor 
+        que se cargara por defecto.
+        */
+
+        function miFuncion (nombre)
+        {   
+            //operador corto circuito OR ||
+            //si nombre viene definido, se asignara la varible nombre, de lo contrario tomara lo 
+            //de la derecha para hacer la asignacion. 
+            nombre = nombre || "lo que esta a la derecha";
+
+            console.log(nombre);
+
+        }
+
+        miFuncion();
+
+
+
+        function mifunction2(nombre)
+        {   //cunando el valor de la izquierda valida a falso, es el valor que se cargara por 
+            //defecto  en la variable
+            nombre = nombre && "lo de la derecha";
+            console.log(nombre);
+        }
+
+        mifunction2();
+    </script>
+</body>
+</html>
