@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //esto es una funcion anonima autoejecutable. Se le dice asi ya que el parentesis final es el que ejecuta a la funcion.
+        //estas funciones se encapsulan para que no tengan problemas con nombres de funciones, variables similares de otras 
+        //funciones. 
+
+        (function(){})();
+
+        //todas estas funciones si o si deben llevar punto y coma al final de estas.
+        (function()
+        {
+            console.log("Hola mundo");
+        })();
+
+
+        //Tambine reciben parametros
+        (function(d,w,c)
+        {
+            c.log("Parametro C");
+            console.log(d);
+            console.log(w);
+
+        })(document, window, console);
+
+
+
+
+
+        //OTRAS MANERAS DE CREAR Y ENCAPSULAR ESTAS FUNCIONES
+
+        //version crockford, esta persona colabora con javascript
+        ((function(){})());
+
+        //funcion unaria, solo lleva un signo +
+        +function(){}();
+
+        +function(a,b)
+        {
+            let suma = a+b;
+            console.log(`la suma es ${suma}`);
+            console.log("funcion unaria");
+        }(a=4, b=6);
+
+
+
+
+
+    </script>
+</body>
+</html>
