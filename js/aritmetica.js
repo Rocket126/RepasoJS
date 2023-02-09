@@ -9,8 +9,7 @@ export function resta(a,b)
 }
 
 //creamos un objeto e incluimos nuestras funciones adentro de esta.
-export const aritmetica = 
-{
+export const aritmetica = {
   suma,
   resta
 };

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //el metodo slice() español "trozo" toma una porcion de un texto o cadena el cual esta porcion
+        //se indica mediante indices. donde indexStart es el comienzo del corte, e indexEnd donde concluira el corte.
+        //este metodo no tansolo troza de de izquierda a derecha, si no al revez tambien, dereche a izquieda.
+        //en este caso parte con numeros negativos 0 a -N
+
+        function trozo(t, p)
+        {
+            return t.slice(0,p);//imprime h0la
+        }
+        console.log(trozo("h0la mundo", 4));
+
+
+
+        let t2=" hola me llamo cristian";
+        console.log(t2.slice(-14,-1));//imprime "llamo cristia" 
+
+
+
+        function recortes(t, r){
+
+            let palabra = [];//lo declaramos como vector vacio
+
+            for(i = 0; i<r; i++)
+            {
+                palabra = palabra + t.charAt(i);
+            }
+
+            return palabra;
+        }
+
+        console.log(recortes("Hola mundo", 4));
+
+
+
+ //********************************************************************
+ //concatenando variables con el signo +
+        let nombre = "criss", apellido ="bozniak";
+        console.log("hola "+ nombre + apellido); //concatena con el signo +
+        
+
+
+        //metodo includes(), este metodo determina si el texto a buscar se encuentra dentro de otro.
+        //es case sensitive, o sea tobi no es igual toBi. devuelve falso
+
+        let texto = "Mi perro se llama tobi, y es muy jugueton";
+
+        let rbusqueda = texto.includes("tobi")? "Si, se ha encontrado el nombre":"no, no existe";
+        
+        console.log(rbusqueda);//me muestra el texto condicional relacionado a la busqueda de tobi
+
+        if(texto.includes("tobi"))//devuelve true por la coincidencia de tobi
+        {
+            console.log("si, existe ese nombre en el texto");
+        }
+
+
+
+
+        //metodo indexOf()
+        //Este me devuel el indice de la cadena que estamos buscando, puede ser una letra inclusive.
+        //devuelve -1 si no le encuentra
+
+        let text2  = "hola mundo, es un texto de prueba";
+        if(text2.indexOf("x"))
+        {
+            console.log("texto encontrado: ", text2.indexOf("e",20));//devuelve el indice de x
+            //el 20 es para indicarle en que indice debe partir la busqueda
+        }
+
+
+//************************************************************************************
+        let texto3 = "hola tobi" ;
+
+        if(texto3.toUpperCase().includes("tobi"))//devuelve true por la coincidencia de tobi
+        {
+            console.log("si, existe ese nombre en el texto");
+        }
+        else if(texto3.toLowerCase().includes("tobi"))
+        {
+            console.log("con tolowerCase existe ese nombre en el texto");
+        }
+
+
+       
+
+// Displays 8
+    var anyString="Brave new world";
+
+    document.write("<P>The index of the first w from the beginning is " + anyString.lastIndexOf("w"));
+    </script>
+</body>
+</html>

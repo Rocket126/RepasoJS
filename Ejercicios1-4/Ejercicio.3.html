@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+    
+       function Ej3(t,c)
+       {
+            return t.split(c);
+            //split crea un nuevo vector de string apartir del caracter que se le indique en 
+            //sus parentesis.
+       }
+
+       console.log(Ej3("hola mundo", " "));
+    
+    
+
+
+
+       
+       //version 2
+       let palabra = "hola mundo";
+       let vector= ["",""];
+ 
+       
+
+       let i=0;
+        for(let j= 0; j<palabra.length; j++ )
+        {
+            if(palabra.at(j) !== " ")
+            {
+                 vector[i] = vector[i] + palabra.at(j);
+            }
+            else{
+                i++;
+            }
+            
+        }
+            
+       console.log(vector);
+
+        //***************************************************************
+        let h;
+        let texto="hola mundos";
+
+        let palabras = texto.split(" ");
+        console.log(palabras);
+
+
+    
+    </script>
+
+
+</body>
+</html>
