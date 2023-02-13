@@ -13,7 +13,7 @@
         //isNaN devuelve false cuando encuentra un espacio vacio, lo convierte a 0 ya que no es NaN.
 1
 
-        //fucncion que retorna el numero de caracteres de una cadena.
+        //fucncion que retorna el numero de caracteres de una cadena en total.
         function cuentaCadenas(t)
         {
             let cont=0;
@@ -60,7 +60,7 @@
         console.log("funcion3:", cCadenas3("hola.+ mundo"));
 
 
-
+        //v4
 
         function cadena4(t)
         {
@@ -77,6 +77,31 @@
             return cont;
         }
 
+
+        //v5
+        function v5(t)
+        {   
+            posicion = t.indexOf(" ");
+            contador = 0;
+
+            while(posicion !== -1)
+            {
+                contador++;
+                posicion=t.indexOf(" ",posicion+1);//a la posicion se le suma 1(mas lo que se le habia encontrado antes) 
+                //y luego comienza a buscar el siguiente caracter de espacio para continuar contando las coincidencias.
+            }
+           
+            return t.length-contador; 
+        }
+
+        console.log("funcion v5 ",v5("Hola mundo perro"));
+
+
+
+        //**********************************************
+
+
+
         let valor = cadena4("hola mundo");
         console.log("total: ",valor);
 
@@ -91,8 +116,8 @@
 
         console.log(nombre.charAt(nombre.length-1));// imrpime la letra L
 
-        
-
+        //con el metodo fill rellena el vector con el valor mencionado 4 desde el indice 1 hasta el largo( no indice) del vector seria 2
+        console.log([1,2,3].fill(4, 1, 2));// muestra [1, 2, 3]
     </script>
 </body>
 </html>
