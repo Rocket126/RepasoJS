@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter,
+        // pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+        const ej3 = (texto,c) => 
+            
+
+
+            (!texto)//si texto no se le ha pasado una cadena
+            ?console.warn("No ha ingresado un texto")
+
+            :(typeof c === "undefined") //si a c no se le a pasado un cararacter
+            ?console.warn("No ha ingresado el separador")
+
+            :console.info(texto.split(c));
+
+
+
+        ej3("hola mundo", " ");
+        ej3("hola mundo",);
+        ej3("");
+        ej3();
+        
+
+    </script>
+</body>
+</html>

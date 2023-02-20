@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
+        //pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+
+        const recorte = (texto="", ta = undefined ) =>
+
+        (!texto)
+        ?console.warn("no se ha ingresado un texto")
+        :(Math.sign(ta) === -1 )
+        ?console.warn("debe ingresar un tamaño positivo")
+        :(ta === undefined)
+        ?console.warn("no ingresaste la longitud para el recorte del texto")
+        :console.info(`nuevo recorte sera "${texto.slice(0,ta)}" `);
+
+
+        recorte();
+        recorte("hola mundo", 4);
+        recorte("hola mundo");
+        recorte("",5);
+        
+
+
+
+    </script>
+</body>
+</html>

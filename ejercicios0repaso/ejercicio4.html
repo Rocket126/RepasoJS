@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Programa una función que repita un texto X veces, 
+        //pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+        const repetir = (texto="", c) => 
+        
+            (!texto)
+            ? console.warn("No se ha ingresado una cadena")
+             :(c === undefined)
+              ?console.warn("no ha entregado la cantidad de veces a repetir")
+               :(Math.sign(c) === -1 || isNaN(c) || c === 0)
+                 ?console.error("debe ser un numero mayor a cero y no debe ser una letra")
+                  :console.info(texto.concat(" ").repeat(c));
+        
+        
+        repetir("hola mundo",3);
+        repetir("hola mundo");
+        repetir("hola mundo",-2);
+        repetir("hola mundo", "m");
+        repetir("",3);
+        repetir();
+
+    </script>
+</body>
+</html>

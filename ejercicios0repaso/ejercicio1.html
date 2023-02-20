@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1) Programa una función que cuente el número de caracteres de una cadena de texto,
+        // pe. miFuncion("Hola Mundo") devolverá 10.
+
+
+        function cuentaCadena(t)
+        {
+            contador=0;
+            let i=0;
+
+            while(i<t.length)
+            {
+                if(t.charAt(i) !== " ")
+                {
+                    contador++;
+                }
+              i++;
+            }
+            return contador;
+        }
+
+        const palabra = (texto="") => //arrow function
+        (!texto) //operador ternario
+        ? console.warn("no ha entregado un texto")
+        : console.info(`el largo del texto "${texto}" es ${cuentaCadena(texto)}`) ;
+
+        palabra("");
+        palabra("Hola mundo");
+
+        //El operador ternario se le indica return de manera escrita solo y cuando lleve llaves
+        //la funcion que lo encapsula, y que a su vez esta tenga mas de una linea de codigo. El operador ternario funciona como una sola linea
+        //para javascript. Si lleva llaves, se debe poner return, de lo contrario no.
+
+    </script>
+</body>
+</html>
